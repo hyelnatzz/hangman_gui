@@ -56,8 +56,11 @@ def addPlayer(name):
 def getHighscore():
     conn = dbConnect()
     cur = conn.cursor()
-    score = cur.execute('SELECT * FROM scores ORDER BY score DESC').fetchone()[2]
-    conn.close()
+    try:
+        score = cur.execute('SELECT * FROM scores ORDER BY score DESC').fetchone()[2]
+    except TypeError:
+        conn.close()
+        score = 0
     return score
 
 
@@ -77,6 +80,16 @@ def getTopTen():
         'SELECT players.name, scores.score FROM players JOIN scores ON players.id = scores.player_id ORDER BY scores.score DESC').fetchall()[:10]
     conn.close()
     return top
+
+
+def resetUserData():
+    conn = dbConnect()
+    cur = conn.cursor()
+    cur.execute('DELETE FROM players')
+    conn.commit()
+    cur.execute('DELETE FROM scores')
+    conn.commit()
+    conn.close()
 
 
 
