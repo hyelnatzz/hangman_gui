@@ -2,13 +2,6 @@
 
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -38,10 +31,11 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 This project was inspired by the cli based hangman game. I recently learnt how to use the PySimpleGUI python library and decided to
 give the game a face
+
+<img src="https://github.com/hyelnatzz/hangman_gui/blob/main/game_screenshot.png" alt="game screenshot" />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -51,14 +45,7 @@ give the game a face
 
 Thanks to the following amazing packages for making this application a reality.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+- [PySimpleGUI](https://pypi.org/project/PySimpleGUI/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
