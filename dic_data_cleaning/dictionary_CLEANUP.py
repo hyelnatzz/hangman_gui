@@ -1,7 +1,10 @@
 import json
 import string
 
+
+# ++++ REMOVING LIST FROM DEFINITIONS
 def delist(val):
+    """create numbered definitions"""
     dfn = ''
     index = 1
     for i in val:
@@ -11,8 +14,7 @@ def delist(val):
 
 word = {}
 
-# ++++ REMOVING LIST FROM DEFINITIONS
-"""
+#CREATE GAME READY DICTIONARY JSON
 with open('data.json','r') as data:
     content = json.load(data)
 
@@ -27,14 +29,14 @@ for k,v in content.items():
 
 with open('semicleaned.json', 'a+') as new:           
     json.dump(word, new)
-"""
+
+
 #print('Done...')
 #print(delist(content['dance']))
 
 
 #sentence = '1. Simple, green, aquatic plants without stems, roots or leaves. They are found floating in the sea and fresh water, but they also grow on the surface of damp walls, rocks, the bark of trees and on soil.\\n(Source: WRIGHT)'
 ## +++++++++++ REMOVING 'SOURCE INFORMATION FROM DEFINITIONS
-"""
 def removeSource(val):
     strt = val.find('\\n(Source:')
     end = val.find(')', strt)
@@ -51,5 +53,4 @@ for k, v in content.items():
 with open('withoutsource.json', 'a+') as new:
     json.dump(word, new)
 
-#print(content['cloud'])
-"""
+print(content['cloud'])
